@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Header from "../../templates/Header";
-import Footer from "../../templates/Footer";
 import Form from "../../organism/Form";
 import FormGroup from "../../molecule/FormGroup";
 import FormLabel from "../../atom/FormLabel";
@@ -8,6 +7,7 @@ import FormInputText from "../../atom/FormInputText";
 import FormInputEmail from "../../atom/FormInputEmail";
 import FormDate from "../../atom/FormInputDate";
 import FormInputTel from "../../atom/FormInputTel";
+import ContactsTable from "../../organism/Contact";
 
 const Contactpage = () => {
   const [name, setName] = useState("");
@@ -18,6 +18,7 @@ const Contactpage = () => {
   const [users, setUsers] = useState([]);
   const [nextId, setNextId] = useState(1);
 
+  const contacts = users;
 
   const handleNameChange = (e) => setName(e.target.value);
   const handleSurnameChange = (e) => setSurname(e.target.value);
@@ -106,9 +107,9 @@ const Contactpage = () => {
           </FormGroup>
 
         </Form>
-      </main>
 
-      <Footer content="Un formulaire en React qui illustre atomic design + events + handler" />
+      <ContactsTable contacts={contacts} />
+      </main>
     </>
   );
 };
