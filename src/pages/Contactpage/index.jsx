@@ -16,35 +16,42 @@ const Contactpage = () => {
   const [email, setEmail] = useState("");
   const [date, setDate] = useState("");
   const [users, setUsers] = useState([]);
+  const [nextId, setNextId] = useState(1);
+
 
   const handleNameChange = (e) => setName(e.target.value);
   const handleSurnameChange = (e) => setSurname(e.target.value);
   const handleTelChange = (e) => setTel(e.target.value);
   const handleEmailChange = (e) => setEmail(e.target.value);
   const handleDateChange = (e) => setDate(e.target.value);
-
+  
+  
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    
     setUsers([
-      ...users,
-      {
-        name,
-        surname,
-        tel,
-        email,
-        date,
-      }
-    ]);
-
-    console.log("Nouvel utilisateur ajouté :", {
+    ...users,
+    {
+      id: nextId,
       name,
       surname,
       tel,
       email,
       date,
-    });
-  };
+    }
+  ]);
+
+  setNextId(nextId + 1);
+
+  console.log("Nouvel utilisateur ajouté :", {
+    id: nextId,
+    name,
+    surname,
+    tel,
+    email,
+    date,
+  });
+};
 
   return (
     <>
