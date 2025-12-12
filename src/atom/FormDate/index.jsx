@@ -1,11 +1,12 @@
-const FormInputDate = ({ inputDate, inputId, handleDate }) => {
+const FormInputDate = ({ value, id, name, onChange }) => {
   return (
     <input
       type="date"
-      name={inputDate}
-      id={inputId}
+      id={id}
+      name={name}
       className="form-control"
-      onInput={handleDate}
+      value={value}
+      onChange={onChange}
     />
   );
 };
