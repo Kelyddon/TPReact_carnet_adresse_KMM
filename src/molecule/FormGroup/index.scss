@@ -1,0 +1,23 @@
+@use "../../assets/scss/utils/mixins" as m;
+@use "../../assets/scss/utils/variables" as v;
+
+.form-group {
+  @include m.displayFlex(null, center, 0.5rem);
+  margin-bottom: 1.5rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:has(textarea) {
+    align-items: flex-start;
+
+    .form-label {
+      margin-top: 0.25rem;
+    }
+  }
+
+  .form-label {
+    flex: 1;
+  }
+}

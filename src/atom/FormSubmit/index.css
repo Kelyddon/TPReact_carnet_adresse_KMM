@@ -1,0 +1,10 @@
+.form-submit {
+  display: block;
+  box-sizing: border-box;
+  margin-left: auto;
+  padding: 0.5rem 1rem;
+  width: 50%;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.5rem;
+  font-weight: bold;
+}

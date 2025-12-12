@@ -1,0 +1,12 @@
+@use "../../utils/variables" as v;
+
+.form-control {
+    flex: 2;
+    box-sizing: border-box;
+    padding: 0.5rem 1rem;
+    font-family: v.$font-primary;
+    font-size: 1rem;
+    background-color: transparent;
+    border: 1px solid v.$white;
+    border-radius: 0.25rem;
+}
