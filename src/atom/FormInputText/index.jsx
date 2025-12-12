@@ -6,6 +6,7 @@ const FormInputText = ({ inputName, inputId, handleNameChange }) => {
       id={inputId}
       className="form-control"
       onInput={handleNameChange}
+      required
     />
   );
 };

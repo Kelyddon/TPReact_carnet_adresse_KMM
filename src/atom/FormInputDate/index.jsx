@@ -1,4 +1,4 @@
-const FormInputDate = ({ value, id, name, onChange }) => {
+const FormInputDate = ({ value, id, name, handleDateChange }) => {
   return (
     <input
       type="date"
@@ -6,7 +6,8 @@ const FormInputDate = ({ value, id, name, onChange }) => {
       name={name}
       className="form-control"
       value={value}
-      onChange={onChange}
+      onChange={handleDateChange}
+      required
     />
   );
 };
