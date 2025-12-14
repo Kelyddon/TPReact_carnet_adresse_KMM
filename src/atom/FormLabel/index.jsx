@@ -1,11 +1,8 @@
-import "./index.css";
-
-const FormLabel = ({ content, inputId }) => {
+const FormLabel = ({ inputId, content }) => {
   return (
-    <label htmlFor={inputId} className="form-label">
+    <label htmlFor={inputId} className="text-sm text-gray-700">
       {content}
     </label>
   );
 };
-
 export default FormLabel;

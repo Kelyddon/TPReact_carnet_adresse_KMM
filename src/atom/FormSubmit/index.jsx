@@ -1,11 +1,7 @@
-import "./index.css";
-
-const FormSubmit = ({ content }) => {
+export default function FormSubmit({ label = "Ajouter" }) {
   return (
-    <button type="submit" className="form-submit">
-      {content}
+    <button type="submit" className="w-full px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded">
+      {label}
     </button>
   );
-};
-
-export default FormSubmit;
+}

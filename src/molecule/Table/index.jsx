@@ -1,13 +1,13 @@
 import TableHead from "../../atom/TableHead";
 import TableBody from "../../atom/TableBody";
 
-export default function Table({ contacts = [] }) {
+export default function Table({ contacts = [], onDelete, onEdit, isBirthdayToday }) {
   return (
-    <div className="overflow-x-auto rounded-lg border border-gray-200">
-      <table className="min-w-full divide-y divide-gray-200">
-        <TableHead />
-        <TableBody contacts={contacts} />
-      </table>
-    </div>
+    <table className="w-full border border-gray-300 mt-6">
+      <TableHead
+        columns={["Prénom", "Nom", "Téléphone", "Email", "Anniversaire", "Actions"]}
+      />
+      <TableBody contacts={contacts} onDelete={onDelete} onEdit={onEdit} isBirthdayToday={isBirthdayToday} />
+    </table>
   );
 }

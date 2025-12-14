@@ -1,16 +1,15 @@
-import "./index.scss";
-
-const FormInputEmail = ({ inputName, inputId , handleEmailChange}) => {
+const FormInputEmail = ({ inputName, inputId, value, handleEmailChange, placeholder }) => {
   return (
     <input
       type="email"
       name={inputName}
       id={inputId}
-      className="form-control"
+      className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      value={value}
       onChange={handleEmailChange}
+      placeholder={placeholder}
       required
     />
   );
 };
-
 export default FormInputEmail;
